@@ -21,7 +21,7 @@ bot.on('message', async (msg) => {
                     [{
                         text: 'Продавец',
                         web_app: {
-                            url: 'https://garagetest.vercel.app/seller-panel'
+                            url: 'https://mygaragewebapp-ajgrj870z-siqqdevs-projects-2a9a6541.vercel.app/seller-panel'
                         }
                     }
                     ],
@@ -37,7 +37,7 @@ bot.on('message', async (msg) => {
                         {
                             text: 'Менеджер',
                             web_app: {
-                                url: 'https://garagetest.vercel.app/manager-panel'
+                                url: 'https://mygaragewebapp-ajgrj870z-siqqdevs-projects-2a9a6541.vercel.app/manager-panel'
                             }
                         }
                     ],
