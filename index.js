@@ -18,7 +18,7 @@ bot.on('message', async (msg) => {
     try {
         const res = await axios.post('http://62.113.99.97/api/users/register', { telegramId: telegramId, username: username, nickname: nickname }, {
             headers: {
-                'telegramId': telegramId
+                'telegram-id': telegramId
             }
         })
         console.log(res.statusText)
