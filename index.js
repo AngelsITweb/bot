@@ -16,7 +16,7 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, `Отправляю запрос на регистрацию.\nТелеграм ID: ${telegramId}\nUsername: ${username}\nNickname: ${nickname}`)
     
     try {
-        const res = await axios.post('http://62.113.99.97/api/users/register', { telegramId, username, nickname })
+        const res = await axios.post('http://62.113.99.97/api/users/register', { telegramId: telegramId, username: username, nickname: nickname })
         console.log(res.statusText)
         await bot.sendMessage(chatId, `Регистрация прошла успешно ${res.data.username}`)
     } catch (error) {
