@@ -16,7 +16,7 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, `Отправляю запрос на регистрацию.\nТелеграм ID: ${telegramId}\nUsername: ${username}\nNickname: ${nickname}`)
     
     try {
-        const res = await axios.post('http://62.113.99.97/api/users/register', { telegramId: telegramId, username: username, nickname: nickname }, {
+        const res = await axios.post('http://my-garage.site/api/users/register', { telegramId: telegramId, username: username, nickname: nickname }, {
             headers: {
                 'telegram-id': telegramId
             }
