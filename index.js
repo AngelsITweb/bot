@@ -10,9 +10,14 @@ bot.on('message', async (msg) => {
     if (msg.text === '/start') {
         const chatId = msg.chat.id
         await bot.sendMessage(chatId, `Рады вас видеть, ${msg.from.first_name}! Проводится регистрация, пожалуйста подождите`)
-        const res = await axios.post('http://62.113.99.97/api/users/register', { telegramId: msg.from.id.toString(), username: msg.from.username, nickname: msg.from.first_name })
-        console.log(res.statusText)
-        await bot.sendMessage(chatId, `Регистрация прошла успешно ${res.data.username}`)
+        try {
+            const res = await axios.post('http://62.113.99.97/api/users/register', { telegramId: msg.from.id.toString(), username: msg.from.username, nickname: msg.from.first_name })
+            console.log(res.statusText)
+            await bot.sendMessage(chatId, `Регистрация прошла успешно ${res.data.username}`)
+        } catch (error) {
+            console.error('Ошибка регистрации:', error)
+            await bot.sendMessage(chatId, `Произошла ошибка при регистрации: ${error.message}`)
+        }
     }
     if (msg.text === '/login') {
         await bot.sendMessage(msg.chat.id, 'Выберите роль', {
