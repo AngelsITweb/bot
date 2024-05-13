@@ -1,4 +1,4 @@
-const token = '7187159461:AAH1EAia-I-T4qixQM7sfFme1VQB2xNJLfs'
+const token = '7066498966:AAGe0PJTKhty_1S-8gy7016myjsIfYztT0Q'
 
 const TelegramBot = require('node-telegram-bot-api')
 const axios = require("axios");
