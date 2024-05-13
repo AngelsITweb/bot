@@ -5,6 +5,9 @@ const axios = require("axios");
 
 const bot = new TelegramBot(token, { polling: true })
 
+
+const backendDomain = process.env.DOMAIN
+
 bot.on('message', async (msg) => {
     console.log('started')
     if (msg.text === '/start') {
@@ -16,7 +19,7 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, `Отправляю запрос на регистрацию.\nТелеграм ID: ${telegramId}\nUsername: ${username}\nNickname: ${nickname}`)
     
     try {
-        const res = await axios.post('http://my-garage.site/api/users/register', { telegramId: telegramId, username: username, nickname: nickname }, {
+        const res = await axios.post('https://my-garage.site/api/users/register', { telegramId: telegramId, username: username, nickname: nickname }, {
             headers: {
                 'telegram-id': telegramId
             }
@@ -35,7 +38,7 @@ bot.on('message', async (msg) => {
                     [{
                         text: 'Продавец',
                         web_app: {
-                            url: 'https://mygaragewebapp-ajgrj870z-siqqdevs-projects-2a9a6541.vercel.app/seller-panel'
+                            url: 'mygarage-eight.vercel.app/seller-panel'
                         }
                     }
                     ],
@@ -51,7 +54,7 @@ bot.on('message', async (msg) => {
                         {
                             text: 'Менеджер',
                             web_app: {
-                                url: 'https://mygaragewebapp-ajgrj870z-siqqdevs-projects-2a9a6541.vercel.app/manager-panel'
+                                url: 'mygarage-eight.vercel.app/manager-panel'
                             }
                         }
                     ],
