@@ -1,4 +1,4 @@
-const to
+
 
 // ЗАМЕНИТЬ НА ТОКЕН БОТА
 const token = '7066498966:AAGe0PJTKhty_1S-8gy7016myjsIfYztT0Q'
