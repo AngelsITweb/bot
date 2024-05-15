@@ -35,7 +35,7 @@ bot.on('message', async (msg) => {
         if (userExists) {
             await bot.sendMessage(chatId, 'Вы уже зарегистрированы!');
         } else {
-            const res = await axios.post('http://localhost:3000/api/users/register', {
+            const res = await axios.post('http://my-garage.site/api/users/register', {
                 telegramId: msg.from.id,
                 username: msg.from.username,
                 nickname: msg.from.first_name,
