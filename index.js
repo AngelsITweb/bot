@@ -38,7 +38,7 @@ bot.on('message', async (msg) => {
                     [{
                         text: 'Продавец',
                         web_app: {
-                            url: 'mygarage-eight.vercel.app/seller-panel'
+                            url: 'https://mygarage-eight.vercel.app/seller-panel'
                         }
                     }
                     ],
@@ -54,7 +54,7 @@ bot.on('message', async (msg) => {
                         {
                             text: 'Менеджер',
                             web_app: {
-                                url: 'mygarage-eight.vercel.app/manager-panel'
+                                url: 'https://mygarage-eight.vercel.app/manager-panel'
                             }
                         }
                     ],
