@@ -83,6 +83,7 @@ async function checkUserExists(msg) {
 	}, {
 		headers: {
 			'registration-request': 'true',
+			"telegram-id": msg.from.id
 		},
 	});
 	if (typeof res.data === 'string' && res.data.includes('уже')) {
