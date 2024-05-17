@@ -36,7 +36,7 @@ async function main() {
 						"telegram-id": msg.from.id
 					},
 				});
-				await bot.sendMessage(chatId, 'Вы успешно зарегистрировались!');
+				await bot.sendMessage(chatId, 'Вы успешно зарегистрировались!' + msg.from.id);
 			}
 		}
 		if (msg.text === '/login') {
