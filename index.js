@@ -36,7 +36,7 @@ async function main() {
 						"telegram-id": msg.from.id
 					},
 				});
-				await bot.sendMessage(chatId, 'Вы успешно зарегистрировались!' + msg.from.id);
+				await bot.sendMessage(chatId, 'Вы успешно зарегистрировались!');
 			}
 		}
 		if (msg.text === '/login') {
@@ -83,16 +83,9 @@ async function checkUserExists(msg) {
 	}, {
 		headers: {
 			'registration-request': 'true',
-			"telegram-id": msg.from.id
 		},
 	});
 	if (typeof res.data === 'string' && res.data.includes('уже')) {
 		return true
 	}
 }
-
-
-
-
-
-                            
