@@ -62,7 +62,7 @@ async function main() {
 							{
 								text: 'Менеджер',
 								web_app: {
-									url: 'https://mygarage-webapp.vercel.app/seller-panel'
+									url: 'https://mygarage-webapp.vercel.app/manager-panel'
 								}
 							}
 						],
