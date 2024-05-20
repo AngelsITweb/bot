@@ -46,7 +46,7 @@ async function main() {
 						[{
 							text: 'Продавец',
 							web_app: {
-								url: 'https://mygaragewebapp-ajgrj870z-siqqdevs-projects-2a9a6541.vercel.app/seller-panel'
+								url: 'https://mygarage-webapp.vercel.app/seller-panel'
 							}
 						}
 						],
@@ -62,7 +62,7 @@ async function main() {
 							{
 								text: 'Менеджер',
 								web_app: {
-									url: 'https://mygaragewebapp-ajgrj870z-siqqdevs-projects-2a9a6541.vercel.app/manager-panel'
+									url: 'https://mygarage-webapp.vercel.app/seller-panel'
 								}
 							}
 						],
